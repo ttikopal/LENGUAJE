@@ -6,16 +6,42 @@
         <email>root@admin.com</email>
         <password>root</password>
     </usuario>
-    <usuario tipo="usuario">
-        <id>2</id>
-        <nombre>María García</nombre>
-        <email>maria.garcia@example.com</email>
-        <password>abcde</password>
+      <usuario tipo="usuario">
+        <id>1</id>
+        <nombre>root</nombre>
+        <email>root@admin.com</email>
+        <password>root</password>
     </usuario>
-    <usuario tipo="usuario">
-        <id>3</id>
-        <nombre>Pedro López</nombre>
-        <email>pedro.lopez@example.com</email>
-        <password>qwerty</password>
+          <usuario tipo="usuario">
+        <id>1</id>
+        <nombre>rooot</nombre>
+        <email>root@admin.com</email>
+        <password>rooot</password>
     </usuario>
+          <usuario tipo="usuario">
+        <id>1</id>
+        <nombre>root</nombre>
+        <email>root@admin.com</email>
+        <password>root</password>
+    </usuario>
+          <usuario tipo="usuario">
+        <id>1</id>
+        <nombre>root</nombre>
+        <email>root@admin.com</email>
+        <password>root</password>
+    </usuario>
+          <usuario tipo="usuario">
+        <id>1</id>
+        <nombre>root</nombre>
+        <email>root@admin.com</email>
+        <password>root</password>
+    </usuario>
+          <usuario tipo="usuario">
+        <id>1</id>
+        <nombre>root</nombre>
+        <email>root@admin.com</email>
+        <password>root</password>
+    </usuario>
+
+    
 </usuarios>
