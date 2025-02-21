@@ -1,0 +1,399 @@
+@font-face {
+    font-family: 'god';
+    src: url(/PROYECTO/fonts/Slope\ Opera.otf);
+
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #696969;
+    overflow-x: hidden;
+}
+.envios {
+    height: 25px;
+    width: 100%;
+    background-color:#000000;
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(149, 173, 186, 0.9); /* Fondo semi-transparente */
+    transition: 0.5s ease; /* Transición suave para la opacidad */
+    z-index: 11; /* Asegúrate de que esté sobre el video */
+}
+
+#header-contenedor {
+    display: flex; /* Usamos flexbox para organizar los elementos */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centra verticalmente */
+    background-color: rgba(149, 173, 186, 0.9);
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.links {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linksright {
+    margin-right: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+ 
+}
+.inicio::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px; /* Ajusta según la separación deseada */
+    width: 0;
+    height: 2px; /* Grosor de la línea */
+    background: black; /* Color de la línea */
+    transition: width 0.4s ease, left 0.4s ease;
+}
+.inicio:hover::after {
+    width: 100%;
+    left: 0;
+}
+.inicio:visited {
+    color: inherit; /* Elimina el color morado de enlaces visitados */
+}
+h1{
+    font-family: 'god';
+    color: #fff;
+}
+.inicio {
+    text-decoration: none;
+    font-family: 'god', sans-serif;
+    font-size: 20px;
+    position: relative;
+}
+.logo{
+    margin-left: 10px;
+}
+.logo img {
+    margin-top: 35px;
+    height: 150px; /* Altura del logo */
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;}
+
+.buscar {
+    height: 25px;
+    width: auto;
+    margin-right: 10px;
+}
+.main {
+    display: flex;
+    height: 110vh;
+    width: 100vh;
+    margin-top: calc(80px + 25px);
+    gap: 250px;
+}
+.info {
+    justify-content: space-between;
+    margin-top: 30px;
+    color: #fff;
+    font-family: 'god';
+}
+.precio{
+    font-size: 25px;
+    color: #000;
+    background-color: #FFFFFF;
+    display: block;
+    padding: 4px;
+    width: 100vh;
+    border-radius: 8px;
+}
+.impuestos{
+    font-size: 13px;
+    margin-top: 20px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+
+}
+.fotos{
+    height: 500px;
+    width: 700px;
+}
+.button-23{
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+  margin-bottom: 30px;
+}
+
+.button-23:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.button-23:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+.button-23:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.main-image img {
+
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+.thumbnails {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thumbnails img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.thumbnails :hover {
+    opacity: 1;
+}
+.tallas-container {
+    margin: 20px 0;
+
+}
+
+.tallas-label {
+    font-family: 'god', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    color: #ffffff;
+
+}
+
+.tallas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.talla {
+    font-family: 'god', sans-serif;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.talla:hover {
+    background-color: #696969;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .talla {
+    background-color: #3e8e41;  /* Green color when selected */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.menu {
+    width: 400px;
+    color: white;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    gap: 5px;
+}
+
+.dropdown {
+    border-top: 1px solid #555;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid white;
+    border-radius: 5px;
+}
+
+/* Estilo para el título del desplegable */
+.dropdown label {
+
+    display: block;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Flecha hacia abajo al principio */
+.dropdown input[type="checkbox"] {
+    display: none;
+}
+
+/* Mostrar la flecha según si el checkbox está marcado */
+.dropdown label::after {
+    content: "▼"; /* Flecha hacia abajo por defecto */
+    font-size: 14px;
+    float: right;
+}
+
+.dropdown input[type="checkbox"]:checked + label::after {
+    content: "▲"; /* Flecha hacia arriba cuando el checkbox está marcado */
+}
+
+/* Estilos para el contenido del desplegable */
+.dropdown-content {
+    display: block;   /* Hacemos que se muestre inicialmente (a través de JS controlaremos su visibilidad) */
+    opacity: 0;       /* Lo mantenemos invisible inicialmente */
+    max-height: 0;    /* La altura se mantendrá en 0 (cerrado) */
+    overflow: hidden; /* Evitamos que el contenido se desborde */
+    padding: 0 10px;  /* Espaciado */
+    color: white;
+    text-align: left;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* Mostrar el contenido solo cuando el checkbox está marcado */
+.dropdown input[type="checkbox"]:checked + label + .dropdown-content {
+    opacity: 1;           /* Hace que se vuelva visible */
+    max-height: 500px;     /* Establece una altura máxima para el contenido desplegado */
+    padding: 10px;         /* Agrega algo de padding cuando se abre */
+}
+
+.dropdown-content a {
+    color: white;
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+}
+footer {
+    background-color: rgba(149, 173, 186); /* Color de fondo del footer */
+    color: white; /* Color del texto */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar texto */
+    margin-top: 50px;
+    z-index: 12;
+}
+
+.footer-contenedor {
+    display: flex; /* Usar flexbox para organizar las secciones */
+    justify-content: space-around; /* Espaciado uniforme entre secciones */
+    max-width: 1200px; /* Ancho máximo */
+    margin: auto; /* Centrar el contenedor */
+}
+
+.footer-seccion {
+    width: 30%; /* Ancho de cada sección */
+}
+
+.footer-seccion h4 {
+    border-bottom: 1px solid #fff; /* Línea inferior para el título */
+    padding-bottom: 10px; /* Espaciado inferior */
+}
+
+.redes-sociales {
+    list-style: none; /* Eliminar puntos de lista */
+    padding: 0; /* Eliminar padding */
+}
+
+.redes-sociales li {
+    display: inline; /* Mostrar redes sociales en línea */
+    margin: 0 10px; /* Espaciado entre enlaces */
+}
+
+.footer-copyright {
+    margin-top: 20px; /* Espaciado superior */
+}
+@media (max-width: 600px) {
+    
+    body {
+        width: 100%;
+        padding: 15px;
+    }
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product-gallery{
+        width: 100vh;
+        margin: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+    .precio {
+        width: 100%;
+    }
+    footer{
+        display: none;
+    }
+    .info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

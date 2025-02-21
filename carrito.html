@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito Zapas God</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Color de fondo */
+            font-family: Arial, sans-serif; /* Fuente */
+        }
+        .regresar {
+            padding: 3px;
+        }
+        .regresar::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -2px; /* Ajusta según la separación deseada */
+        width: 0;
+        height: 2px; /* Grosor de la línea */
+        background: black; /* Color de la línea */
+        transition: width 0.4s ease, left 0.4s ease;
+        }
+        .regresar:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        .regresar:visited {
+            color: inherit; /* Elimina el color morado de enlaces visitados */
+        }
+
+        .mensaje {
+            text-align: center;
+            background: #fff; /* Fondo del mensaje */
+            padding: 20px;
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            animation: fadeIn 2s ease-in-out; /* Animación de entrada */
+            position: relative;
+        }
+
+        .cargando {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #28a745; /* Color del borde */
+            border-top-color: transparent; /* Sin color en la parte superior */
+            border-radius: 50%; /* Forma circular */
+            animation: spin 1s linear infinite; /* Animación de giro */
+            margin: 20px auto; /* Centrar horizontalmente */
+        }
+
+        /* Animación de giro */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(90deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            75% {
+                transform: rotate(270deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Animación de desvanecimiento */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="mensaje">
+        <h1>¡En Construcción!</h1>
+        <p>El carrito está en desarrollo y estará disponible lo antes posible.</p>
+        <div class="cargando"></div>
+        <div>
+            <a href="tienda.html" class="regresar">Volver a la tienda</a>
+        </div>
+    </div>
+ 
+</body>
+</html>

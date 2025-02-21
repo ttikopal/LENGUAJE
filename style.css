@@ -1,0 +1,941 @@
+@font-face {
+    font-family: 'god';
+    src: url(fonts/Slope\ Opera.otf);
+
+}
+body {
+    margin: 0;
+    min-height: 260vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+}
+.imagenfondo{
+    background-attachment: fixed;
+    position: fixed; /* La imagen tiene posición absoluta */
+    top: 0; /* Posición en la esquina superior */
+    left: 0; /* Alineada al lado izquierdo */
+    width: 100%; /* Ajusta para ocupar todo el ancho */
+    height: 100%; /* Ajusta para ocupar todo el alto */
+    object-fit: cover; /* Escala la imagen sin deformarla */
+    z-index: -1; /* Envía la imagen detrás del contenido */
+}
+
+.envios {
+    height: 25px;
+    width: 100%;
+    background-color:#000000;
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.5s ease; /* Transición suave para la opacidad */
+    z-index: 11; /* Asegúrate de que esté sobre el video */
+}
+
+#header-contenedor {
+    display: flex; /* Usamos flexbox para organizar los elementos */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centra verticalmente */
+    background: rgba(102, 240, 255, 0.349);
+    background: linear-gradient(90deg, rgba(102, 240, 255, 0.877) 0%, rgba(255, 255, 255, 0.801) 50%, rgba(87, 69, 252, 0.664) 100%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    height: 60px;
+}
+
+.links {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linksright {
+    margin-right: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+ 
+}
+
+.inicio::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px; /* Ajusta según la separación deseada */
+    width: 0;
+    height: 2px; /* Grosor de la línea */
+    background: black; /* Color de la línea */
+    transition: width 0.4s ease, left 0.4s ease;
+    color: inherit;
+}
+.inicio:hover::after {
+    width: 100%;
+    left: 0;
+    color: inherit;
+}
+.inicio:visited {
+    color: inherit; /* Elimina el color morado de enlaces visitados */
+}
+.inicio {
+    text-decoration: none;
+    font-family: 'god', sans-serif;
+    font-size: 20px;
+    position: relative;
+    color: inherit;
+}
+.logo{
+    margin-left: 10px;
+}
+.logo img {
+    margin-top: 35px;
+    height: 150px; /* Altura del logo */
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;}
+
+.buscar {
+    height: 25px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.videofondoindex {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Mantiene el video detrás del contenido */
+    transition: filter 0.3s ease; /* Transición suave para el desenfoque */
+}
+
+.videofondo{
+    filter: blur(10px);
+}
+
+.content2{
+    margin-top: 935px;
+
+}
+h3 {
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'god';
+}
+.contenedor-principal {
+    display: flex; /* Usar flexbox para disposición */
+}
+.filtros {
+    position: fixed; /* Mantiene el div en la misma posición al hacer scroll */
+    margin-top: 10%; /* Espacio desde el top */
+    margin-left: 90px;
+    border-radius: 20px;
+    width: 200px; /* Ancho fijo */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Sombra para destacar */
+    font-family: 'god';
+    backdrop-filter: blur(40px); /* Desenfoque de fondo */
+    border: 1px solid rgb(110, 110, 110);
+    align-items: center;
+}
+.filtros h2 {
+    margin-bottom: 15px;
+}
+.busqueda, .marca, .precio {
+    color: #ffffff;
+}
+.precio label {
+    margin-top: 20px;
+}
+.precio input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.precio output {
+    display: inline;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.busqueda input, .marca select {
+    width: 100%; /* Ancho completo */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordes redondeados */
+}
+.aplicar-boton {
+    margin-top: 20px;
+    font-family: 'god';
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background-color: #28a745; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.aplicar-boton:hover {
+    background-color: #218838; /* Color al pasar el cursor */
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 5.5rem;
+  }
+  
+  /* Removes default focus */
+  input[type="range"]:focus {
+    outline: none;
+  }
+  
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #83a4af;
+    border-radius: 1rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -12px; /* Centers thumb on the track */
+    background-color: #ffffff;
+    border-radius: 2rem;
+    height: 2rem;
+    width: 0.5rem;
+  }
+
+.dropdown {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+
+.dropbtn {
+    width: 100%;
+    background-color: #f1f1f1; /* Color del botón */
+    color: #333; /* Color del texto */
+    padding: 10px; /* Espaciado */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor al pasar el mouse */
+    border-radius: 4px; /* Esquinas redondeadas */
+    font-family: 'god';
+}
+.dropdown-tallas {
+    grid-auto-rows: 200px; /* Fijar la altura de las filas */
+    gap: 1px; /* Espaciado entre los elementos */
+    padding: 7px; /* Espaciado interno */
+    z-index: 1; /* Apilar sobre otros elementos */
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posicionamiento absoluto */
+    background-color: rgba(102, 51, 153, 0.562); /* Color de fondo */
+    border: 1px solid rgb(95, 0, 139);
+}
+
+
+.dropdown-tallas a, .dropdown-content a{
+    color: #ffffff; /* Color del texto */
+    padding: 12px 16px; /* Espaciado */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px; /* Espaciado del texto */
+    text-align: center; /* Centrar texto */
+    display: flex; /* Para centrar el texto */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+a{
+    text-decoration: none;
+}
+.dropdown-content a:hover,
+.dropdown-tallas a:hover {
+    color: #b6d3e2;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:hover .dropdown-tallas{
+    display: inline; /* Muestra el contenido al pasar el ratón */
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ddd; /* Cambia el fondo del botón al pasar el ratón */
+}
+.tallas {
+    display: flex; /* Muestra las tallas en fila */
+    flex-wrap: wrap; /* Permite que las tallas se distribuyan en varias líneas */
+    justify-content: center; /* Centra las tallas en el contenedor */
+    opacity: 0; /* Comienza oculto */
+    transform: translateY(20px) rotate(0deg); /* Mueve las tallas hacia abajo y las rota ligeramente */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones suaves */
+}
+.contenido {
+    padding: 20px;
+    margin-top: 190px;
+    margin-left: 440px; /* Espacio entre filtros y contenido */
+    border-radius: 10px; /* Esquinas redondeadas */
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.producto-tienda img {
+    max-width: 100%;
+}
+.producto-tienda {
+    height: 300px;
+    border: 1px solid rgb(110, 110, 110);
+    border-radius: 6%;
+    backdrop-filter: blur(10px); /* Desenfoque de fondo */
+    transition: transform 0.3s ease, z-index 0s; /* Aumenta la duración de la transición a 0.5 segundos */
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 300px;
+}
+.producto-tienda::before {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.producto-tienda:hover::before {
+    animation: bordear 0.3s forwards; /* Llamamos a la animación de bordear el div */
+}
+
+p {
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'god';
+    text-decoration: none;
+}
+.dropdownproducto-content p {
+    margin: 0;
+    justify-content: initial;
+    text-align: initial;
+    color: inherit;
+    font-family: inherit;
+    text-decoration: inherit;
+}
+
+.ayuda1 > p.DANA{
+    color: #000;
+}
+.productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.productosDestacados {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    width: 100%;
+    height: auto;
+    background: rgba(102, 240, 255, 0.349);
+    background: linear-gradient(90deg, rgba(102, 240, 255, 0.877) 0%, rgba(255, 255, 255, 0.801) 50%, rgba(102, 51, 153, 0.664) 100%);
+     
+    margin-bottom: 50px;
+    font-family: 'god', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+}
+.producto {
+    width: 300px;
+    height: 335px;
+    border: 1px solid rgb(110, 110, 110);
+    border-radius: 6%;
+    backdrop-filter: blur(10px); /* Desenfoque de fondo */
+    transition: transform 0.3s ease, z-index 0s; /* Aumenta la duración de la transición a 0.5 segundos */
+    overflow: hidden;
+}
+.producto:hover {
+    transform: scale(1.1); /* Aumenta un poco el tamaño al pasar el ratón */
+    z-index: 10; /* Aumenta el z-index al pasar el ratón */
+
+}
+.producto img {
+    max-width: 100%;
+}
+.imgprod {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Agrega una transición suave */
+}
+.imgprod:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen cuando se pasa el mouse */
+    opacity: 0.8; /* Le da un pequeño efecto de opacidad */
+}
+
+.producto:hover .tallas {
+    opacity: 1; /* Hace las tallas visibles */
+    transform: translateY(0) rotate(0); /* Restaura la posición original y elimina la rotación */
+}
+
+.talla {
+    display: inline-block;
+    font-size: 12px;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #000000;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    color: #ccc;
+    font-family: 'god';
+    text-decoration: none;
+}
+.talla:hover {
+    background-color: #696969; /* Cambia el fondo al pasar el ratón */
+}
+footer {
+    background-color: rgba(149, 173, 186); /* Color de fondo del footer */
+    color: white; /* Color del texto */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar texto */
+    margin-top: auto;
+}
+
+.footer-contenedor {
+    display: flex; /* Usar flexbox para organizar las secciones */
+    justify-content: space-around; /* Espaciado uniforme entre secciones */
+    max-width: 1200px; /* Ancho máximo */
+    margin: auto; /* Centrar el contenedor */
+}
+
+.footer-seccion {
+    width: 30%; /* Ancho de cada sección */
+}
+
+.footer-seccion h4 {
+    border-bottom: 1px solid #fff; /* Línea inferior para el título */
+    padding-bottom: 10px; /* Espaciado inferior */
+}
+
+.redes-sociales {
+    list-style: none; /* Eliminar puntos de lista */
+    padding: 0; /* Eliminar padding */
+}
+
+.redes-sociales li {
+    display: inline; /* Mostrar redes sociales en línea */
+    margin: 0 10px; /* Espaciado entre enlaces */
+}
+
+.footer-copyright {
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.tienda1 {
+    display: inline-block;
+    width: 80px;
+    height: auto;
+    margin: 0 auto;
+    font-family: 'god';
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #000; /* Color del texto */
+    margin-top: 80px;
+}
+.tienda1:link,
+.tienda1:visited {
+    color: #000; /* Color negro para ambos estados */
+}
+.ayuda1 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 600px;
+    font-family: 'god';
+    justify-content: center;
+    background: rgba(102, 240, 255, 0.349);
+    background: linear-gradient(90deg, rgba(102, 240, 255, 0.877) 0%, rgba(255, 255, 255, 0.801) 50%, rgba(102, 51, 153, 0.664) 100%);
+     
+    margin-top: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    letter-spacing: 0.6px;
+    border: 2px solid red;
+}
+@keyframes bordear {
+    0% {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+
+    100% {
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+}
+
+
+/* REGISTRARSE/INICIAR SESION*/
+.productosDestacados2 {
+    margin-top: 155px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 60px;
+    width: 100%;
+    height: auto;
+    background: rgba(102, 240, 255, 0.349);
+    background: linear-gradient(90deg, rgba(102, 240, 255, 0.877) 0%, rgba(255, 255, 255, 0.801) 50%, rgba(87, 69, 252, 0.664) 100%);
+     
+    font-family: 'god', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+h3 {
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'god';
+}
+/* Contenedor del formulario */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+/* Estilos de las etiquetas y campos de entrada */
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #ffffff;
+}
+form {
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(30px);
+    border: 1px solid rgb(110, 110, 110);
+    margin-bottom: 50px;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #b0ffd1;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);   
+}
+/* Botón de registro */
+button {
+    background-color: #4A90E2;
+    font-family: 'god', sans-serif;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+button:hover {
+    background-color: #357ABD;
+}
+.content{
+    font-family: 'god', sans-serif;
+    margin-top: 150px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*  PAGINA DEL PRODUCTO  */
+.envios {
+    height: 25px;
+    width: 100%;
+    background-color:#000000;
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.main {
+    display: flex;
+    height: 110vh;
+    width: 100vh;
+    margin-top: calc(80px + 25px);
+    gap: 250px;
+}
+.tituloprod{
+    padding: 6px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.info {
+    justify-content: space-between;
+    margin-top: 30px;
+    color: #ffffff;
+    font-family: 'god';
+}
+.info h1{
+    color: #000;
+    margin: 0;
+}
+.precioproducto{
+    font-size: 25px;
+    color: #000;
+    background-color: #FFFFFF;
+    display: block;
+    padding: 4px;
+    width: 100vh;
+    border-radius: 8px;
+}
+.impuestos{
+    font-size: 13px;
+    margin-top: 20px;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+
+}
+.fotos{
+    height: 500px;
+    width: 700px;
+}
+.button-23{
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.button-23:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.button-23:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+.button-23:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.main-image img {
+
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+.thumbnails {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thumbnails img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.thumbnails :hover {
+    opacity: 1;
+}
+.tallasproducto-label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tallasproducto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tallaproducto {
+    font-family: 'god', sans-serif;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid white;
+}
+
+.tallaproducto:hover {
+    background-color: #696969;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .tallaproducto {
+    background-color: #3e8e41;  /* Green color when selected */
+}
+
+.menu {
+    width: 400px;
+    color: white;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    gap: 5px;
+    margin-top: 8px;
+}
+.dropdownproducto {
+    border-top: 1px solid #555;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid white;
+    border-radius: 5px;
+}
+
+/* Estilo para el título del desplegable */
+.dropdownproducto label {
+
+    display: block;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Flecha hacia abajo al principio */
+.dropdownproducto input[type="checkbox"] {
+    display: none;
+}
+
+/* Mostrar la flecha según si el checkbox está marcado */
+.dropdownproducto label::after {
+    content: "▼"; /* Flecha hacia abajo por defecto */
+    font-size: 14px;
+    float: right;
+}
+
+.dropdownproducto input[type="checkbox"]:checked + label::after {
+    content: "▲"; /* Flecha hacia arriba cuando el checkbox está marcado */
+}
+
+/* Estilos para el contenido del desplegable */
+.dropdownproducto-content {
+    display: block;   /* Hacemos que se muestre inicialmente (a través de JS controlaremos su visibilidad) */
+    opacity: 0;       /* Lo mantenemos invisible inicialmente */
+    max-height: 0;    /* La altura se mantendrá en 0 (cerrado) */
+    overflow: hidden; /* Evitamos que el contenido se desborde */
+    padding: 0 10px;  /* Espaciado */
+    color: white;
+    text-align: left;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* Mostrar el contenido solo cuando el checkbox está marcado */
+.dropdownproducto input[type="checkbox"]:checked + label + .dropdownproducto-content {
+    opacity: 1;           /* Hace que se vuelva visible */
+    max-height: 500px;     /* Establece una altura máxima para el contenido desplegado */
+    padding: 10px;         /* Agrega algo de padding cuando se abre */
+}
+
+.dropdownproducto-content a {
+    color: white;
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+}
+/* RESPONSIVE  */
+@media (max-width: 600px) {
+
+    .filtros{
+        display: none;
+    }
+    .tallasproducto{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .linksright img{
+        width: 10px;
+        height: 10px;
+    }
+    .envios{
+        height: 10px;
+        font-size: 4px;
+    }
+    .logo img{
+        width: 85px;
+        height: 85px;
+    }
+    .contenido{
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+    .links{
+        padding: 10px;
+        width: 10px;
+        height: 10px;
+    }
+    #header-contenedor a{
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .producto-tienda{
+        width: 150px;
+        height: 180px;
+    }
+    body, html {
+        margin: 0;
+        width: 100vw;
+    }
+    .videofondoindex{
+        width: 100vw;
+    }
+    .ayuda1{
+        width: 80vw;
+    }
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+    .product-gallery{
+        width: 90vh;
+        margin: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+    .precio {
+        width: 100%;
+    }
+    .thumbnails{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .thumbnail img{
+        width: 2vh;
+    }
+    #main-img{
+        width: 80%;
+    }
+    footer{
+        display: none;
+    }
+    .info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .productosDestacados{
+        font-size: 20px;
+    }
+    .producto{
+        width: 40%;
+        height: 40%;
+    }
+    .tallas{
+        display: none;
+    }
+}
