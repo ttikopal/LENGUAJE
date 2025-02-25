@@ -28,9 +28,6 @@ if (isset($_GET['eliminar'])) {
     header("Location: " . $_SERVER['PHP_SELF']);
     exit;
 }
-
-// Recorrer los perfiles de usuario y mostrarlos
-echo "<h2>Lista de Perfiles de Usuario</h2>";
 ?>
 <style>
     /* Estilo general para la página */
@@ -151,8 +148,9 @@ echo "<h2>Lista de Perfiles de Usuario</h2>";
         }
     }
 </style>
-
 <div class="container">
+    <h2>Gestión de Usuarios</h2> <!-- Agregué un título para más claridad -->
+    
     <?php
     echo "<table>
             <tr>
@@ -191,4 +189,31 @@ echo "<h2>Lista de Perfiles de Usuario</h2>";
 
     echo "</table>";
     ?>
+
+    <!-- Botón para volver a la tienda -->
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="cuenta.php">
+            <button class="btn-volver">Volver a la Tienda</button>
+        </a>
+    </div>
 </div>
+
+<style>
+    /* Botón para volver a la tienda */
+    .btn-volver {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 14px 24px;
+        font-size: 1.1em;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-volver:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+    }
+</style>
